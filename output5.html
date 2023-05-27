@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pre_Trained Evaluation Model</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      color: #333;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .plot {
+      width: 600px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CuBERT Pre_Trained Evaluation Model</h1>
+
+  <h2>Epoch Results</h2>
+  <table>
+    <tr>
+      <th>Epoch</th>
+      <th>Train Loss</th>
+      <th>Train Accuracy</th>
+      <th>Test Accuracy</th>
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>0.0418</td>
+      <td>0.6931</td>
+      <td>0.6931</td>
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td>0.0366</td>
+      <td>0.7723</td>
+      <td>0.7723</td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td>0.0326</td>
+      <td>0.8713</td>
+      <td>0.8713</td>
+    </tr>
+
+  </table>
+
+  <h2>Training Loss</h2>
+  <div class="plot">
+    <img src="training_loss5.png" alt="Training Loss">
+  </div>
+
+  <h2>Training and Test Accuracy</h2>
+  <div class="plot">
+    <img src="accuracy_plot5.png" alt="Accuracy Plot">
+  </div>
+</body>
+</html>
