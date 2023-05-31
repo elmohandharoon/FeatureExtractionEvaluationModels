@@ -55,6 +55,9 @@
       }
       document.getElementById('output-container-' + pageNumber).classList.add('active');
     }
+    function openAnalysisPage() {
+      openOutputPage(6);
+    }
   </script>
 </head>
 <body>
@@ -66,6 +69,7 @@
       <button class="button" onclick="openOutputPage(3)">Token_Based</button>
       <button class="button" onclick="openOutputPage(4)">Pre_Trained</button>
       <button class="button" onclick="openOutputPage(5)">CuBERT</button>
+      <button class="button" onclick="openAnalysisPage()">Result Analysis</button>
     </div>
     <div id="output-container-1" class="output-container active">
       <iframe src="output.html"></iframe>
@@ -82,6 +86,10 @@
     <div id="output-container-5" class="output-container">
       <iframe src="output5.html"></iframe>
     </div>
+    <div id="output-container-6" class="output-container">
+      <iframe src="analysis.html"></iframe>
+    </div>
   </div>
 </body>
 </html>
+
