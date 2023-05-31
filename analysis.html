@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Evaluation Results Analysis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Evaluation Results Analysis</h1>
+
+    <h2>Tree-based Approach:</h2>
+    <p>
+      The models Random Forest and Gradient Boosting perform similarly to Decision Tree in terms of accuracy, precision, recall, and F1-score, suggesting that ensemble methods can effectively handle this detection task.
+      <br><br>
+      SVM and Naive Bayes achieved high precision but relatively low recall, indicating a tendency to classify fewer instances as long method code smells.
+      <br><br>
+      Logistic Regression demonstrates the highest accuracy and perfect precision, indicating that it generalizes well to unseen data. It also indicates that a less complex model like Logistic Regression can provide competitive performance compared to more complex models.
+    </p>
+
+    <h2>Metric-based Approach:</h2>
+    <p>
+      Gradient Boosting performed relatively well compared to other models, with a decent accuracy of 0.7619 and a higher precision of 0.7500. However, the recall value of 0.4286 indicates that there is still room for improvement in capturing a larger proportion of actual long methods.
+      <br><br>
+      The SVM model shows the lowest recall value of 0.1429, indicating that it identified very few instances of long methods correctly. This low recall suggests that the SVM model may not be suitable for this specific task of long method detection using code metrics feature extraction.
+      <br><br>
+      Random Forest, Decision Tree, and Naive Bayes models have similar performance, with relatively lower accuracy, precision, recall, and F1-score values compared to Logistic Regression. This implies that these models may not be as effective in capturing the patterns and characteristics of long methods in the given code snippets.
+      <br><br>
+      Overall, the results highlight the challenges in accurately detecting long methods using code metrics as features. The models struggle to achieve high recall, indicating that they may miss important instances of long methods in the code. This suggests the need for further refinement or exploration of alternative feature extraction techniques or models that can better capture the complex characteristics of long methods.
+    </p>
+
+    <h2>Token-based Approach:</h2>
+    <p>
+      Logistic Regression, Random Forest, and SVM models achieved the same values for accuracy, precision, recall, and F1-score. This indicates that these models consistently classified the code snippets in a similar manner, resulting in identical performance metrics. It suggests that token-based features alone may not provide sufficient discriminatory power to identify and classify long methods effectively.
+      <br><br>
+      The Decision Tree model shows relatively lower performance compared to other models, with lower accuracy, precision, recall, and F1-score values. The lower values indicate that the Decision Tree model struggled to accurately classify the code snippets based on token-based features. This may be attributed to the limitations of decision tree-based algorithms in capturing the complex relationships between tokens and detecting long methods.
+      <br><br>
+      The Naive Bayes model achieved moderate performance, with an accuracy of 0.6667 and precision of 0.5000. The relatively higher recall value of 0.5714 indicates that the Naive Bayes model was able to capture a larger proportion of actual long methods compared to other models. However, the F1-score of 0.5333 suggests that there is room for improvement in achieving a better balance between precision and recall.
+    </p>
+
+    <h2>Pre_Trained based Approach:</h2>
+    <p>
+      SVM outperformed other models in terms of accuracy, precision, recall, and F1-score, indicating the efficacy of the feature representation learned by CuBERT.
+      <br><br>
+      Decision Tree had the lowest accuracy at 57.14%. It showed extremely low precision (0%), recall (0%), and F1-score (0%). This indicates that Decision Tree had poor performance, potentially due to the limited capability of decision trees in utilizing complex feature representations and is not suitable for this task.
+      <br><br>
+      Logistic Regression and Random Forest perform reasonably well but struggle with recall. This indicates that while they can accurately identify long methods, they may miss some instances of them.
+    </p>
+
+    <h2>Transformer-based Approach:</h2>
+    <p>
+      The training process showed improvement over epochs, with increasing train and test accuracy, indicating effective learning of the CuBERT model for the detection task.
+      <br><br>
+      The achieved accuracy demonstrates the potential of using pretrained CuBERT models for transformer model on code snippets without additional feature extraction.
+    </p>
+
+    <h2>Overall:</h2>
+    <ol>
+      <li>
+        Tree-based feature extraction approach outperforms the code metrics approach. This is primarily attributed to the fact that the features extracted from trees provide a richer and more informative representation compared to the code metrics.
+      </li>
+      <li>
+        The token-based approach demonstrated relatively high precision but struggled with recall, indicating potential challenges in capturing all instances of long method code smells using token-level features.
+      </li>
+      <li>
+        Pretrained CuBERT feature extraction based approach showed promise in leveraging learned representations for code snippet analysis, achieving competitive performance compared to other approaches.
+      </li>
+      <li>
+        SVM consistently demonstrated high precision across different approaches, suggesting its capability in correctly identifying true positives.
+      </li>
+      <li>
+        Decision Tree, in several approaches, struggled to achieve desirable performance, possibly due to its limitations in capturing complex relationships among features.
+      </li>
+      <li>
+        Naive Bayes achieved varying results across approaches, indicating its sensitivity to different feature extraction techniques and the inherent assumptions of the Naive Bayes classifier.
+      </li>
+      <li>
+        The pretrained CuBERT-based approaches generally exhibited higher accuracy and F1-scores compared to metric-based and token-based approaches, highlighting the benefits of leveraging pretraining on large code corpora.
+      </li>
+      <li>
+        The transformer model based approach using pretrained CuBERT models showcased promising results, suggesting that fine-tuning CuBERT specifically on long method code smell detection can be effective.
+      </li>
+      <li>
+        Ensemble methods, such as Random Forest and Gradient Boosting, consistently demonstrated competitive performance across different approaches, suggesting their suitability for this task.
+      </li>
+      <li>
+        The evaluation results highlight the importance of selecting appropriate feature extraction techniques and classifiers that align with the characteristics and complexities of the long method code smell detection task.
+      </li>
+    </ol>
+  </div>
+</body>
+</html>
